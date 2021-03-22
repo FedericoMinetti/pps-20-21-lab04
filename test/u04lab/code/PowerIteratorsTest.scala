@@ -11,6 +11,11 @@ class PowerIteratorsTest {
   val factory = new PowerIteratorsFactoryImpl()
 
   @Test
+  def test(): Unit ={
+    assertEquals(1, 1);
+  }
+
+  @Test
   def testIncremental() {
     val pi = factory.incremental(5,_+2); // pi produce 5,7,9,11,13,...
     assertEquals(Option.of(5), pi.next());
